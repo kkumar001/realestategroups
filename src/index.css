@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Nunito';
+  background: #DDD0C8;
+  color: #323232;
+}
+
+.custom-number-input::-webkit-inner-spin-button,
+.custom-number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.shadow-card {
+  --tw-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --tw-shadow-colored: 0px 1px 2px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@layer utilities {
+  
+  .input {
+    @apply bg-white border border-gray-400 text-gray-900 text-lg rounded-lg focus:ring-[#d39f7d] focus:border-[#d39f7d] block w-full p-2.5 mt-2.5 font-normal shadow-card;
+  }
+
+  .btn {
+    @apply text-white bg-gradient-to-r from-[#f2ece8] to-[#bc8966] focus:ring-4 focus:outline-none focus:ring-[#d39f7d] font-semibold rounded-lg text-lg w-full sm:w-auto px-5 py-2.5 text-center;
+  }
+}
